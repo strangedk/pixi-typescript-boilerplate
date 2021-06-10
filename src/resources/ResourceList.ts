@@ -1,10 +1,12 @@
 class ResourceList {
-    static PIXI_LOGO = `../assets/pixi.png`;
+    static BG = `../assets/bg.jpg`;
+    static CARD = `../assets/card.png`;
 
     static CUSTOM_RESOURCES: string[] = [];
 
     static LIST: string[] = [
-        ResourceList.PIXI_LOGO,
+        ResourceList.BG,
+        ResourceList.CARD,
         ...ResourceList.CUSTOM_RESOURCES,
     ];
 }
