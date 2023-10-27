@@ -14,7 +14,7 @@ class GameScreen extends PIXI.Container {
         super();
 
         // @ts-ignore
-        this.cards = new Array(6).fill(1).map((v, i) => {
+        this.cards = new Array(6).fill(1).map(() => {
             const card = new SpriteCommon(ResourceList.CARD);
             card.on('click', () => this.do(card));
             return card;
@@ -29,7 +29,7 @@ class GameScreen extends PIXI.Container {
         this.arrangeElements();
     }
 
-    public animate = (delta: number = 0) => {
+    public animate = () => {
     }
 
     private do(card: SpriteCommon) {
@@ -54,8 +54,6 @@ class GameScreen extends PIXI.Container {
     }
 
     private arrangeElements = () => {
-        const {app} = this;
-
         // Bg
         this.bg.anchor.set(0.5);
         this.bg.position.set(this.bg.width / 2, 213);
