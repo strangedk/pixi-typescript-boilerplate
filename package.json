@@ -11,10 +11,9 @@
   "license": "MIT",
   "dependencies": {
     "gsap": "^3.6.1",
-    "pixi.js": "^5.3.3"
+    "pixi.js": "^7.3.2"
   },
   "devDependencies": {
-    "@types/pixi.js": "^5.0.0",
     "ts-loader": "^8.0.11",
     "typescript": "^4.0.5",
     "webpack": "^4.44.2",
