@@ -2,10 +2,8 @@
   "name": "webpack-starter-kit",
   "version": "1.0.0",
   "description": "pixi-typescript-boilerplate",
-  "main": "./src/index.html",
   "scripts": {
-    "start": "webpack-dev-server --content-base src --open --hot --inline",
-    "build": "webpack --content-base src"
+    "start": "parcel src/index.html"
   },
   "author": "strangedk",
   "license": "MIT",
@@ -14,10 +12,11 @@
     "pixi.js": "^7.3.2"
   },
   "devDependencies": {
+    "@types/pixi.js": "^5.0.0",
+    "parcel": "^2.10.1",
+    "punycode": "^1.4.1",
+    "querystring-es3": "^0.2.1",
     "ts-loader": "^8.0.11",
-    "typescript": "^4.0.5",
-    "webpack": "^4.44.2",
-    "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0"
+    "typescript": "^4.0.5"
   }
 }

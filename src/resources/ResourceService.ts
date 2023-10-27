@@ -2,21 +2,17 @@ import {Assets, Sprite } from 'pixi.js';
 import ResourceList from "./ResourceList";
 
 class ResourceService {
-    static resources: any = {};
     static init = (onSuccess: () => void) => {
-        // const {shared} = PIXI.Loader;
-        // ResourceList.LIST.forEach(resource => shared.add(resource));
-        // shared.load(onSuccess);
+        // The hard way
+        // const bundle = ResourceList.LIST
+        //     .map(name => ({ [name]: name }))
+        //     .reduce((acc, elem) => ({...acc, ...elem}), {})
+        //
+        // Assets.addBundle('assets', bundle);
+        // Assets.loadBundle('assets').then(() => onSuccess());
 
-        const bundle = ResourceList.LIST
-            .map(name => ({ [name]: name }))
-            .reduce((acc, elem) => ({...acc, ...elem}), {})
-
-        Assets.addBundle('assets', bundle);
-        Assets.loadBundle('assets').then(r => onSuccess());
-
-        // Or the easier
-        // Assets.load(ResourceList.LIST).then();
+        // Or the easier, but the same
+        Assets.load(ResourceList.LIST).then(() => onSuccess());
     }
 
     static getTexture = (resourceName: string)  => {
