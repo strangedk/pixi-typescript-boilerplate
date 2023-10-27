@@ -16,7 +16,7 @@ class ResourceService {
     }
 
     static getTexture = (resourceName: string)  => {
-        return Assets.get(resourceName).texture;
+        return Assets.get(resourceName);
     }
 
     static getSprite = (resourceName: string) => {
