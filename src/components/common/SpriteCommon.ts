@@ -8,8 +8,7 @@ class SpriteCommon extends PIXI.Sprite {
     constructor(resourceName: string) {
         super();
 
-        this.interactive = true;
-        this.buttonMode = true;
+        this.eventMode = 'dynamic';
 
         this.texture = ResourceService.getTexture(resourceName);
     }

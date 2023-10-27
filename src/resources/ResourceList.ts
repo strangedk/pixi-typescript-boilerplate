@@ -1,6 +1,6 @@
 class ResourceList {
-    static BG = `../assets/bg.jpg`;
-    static CARD = `../assets/card.png`;
+    static BG = `bg.jpg`;
+    static CARD = `card.png`;
 
     static CUSTOM_RESOURCES: string[] = [];
 
