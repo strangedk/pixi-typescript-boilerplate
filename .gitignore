@@ -76,7 +76,7 @@ typings/
 .cache
 
 # webpack build output
-dist
+dist/
 
 # Next.js build output
 .next
@@ -101,3 +101,6 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Parcel
+.parcel-cache
